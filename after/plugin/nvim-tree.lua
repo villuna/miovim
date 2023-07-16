@@ -10,14 +10,36 @@ vim.opt.termguicolors = true
 
 -- OR setup with some options
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    width = 30,
-  },
-  renderer = {
-    group_empty = true,
-  },
-  --filters = {
-  --  dotfiles = true,
-  --},
+    sort_by = "case_sensitive",
+    view = {
+        width = 30,
+    },
+    git = {
+        ignore = false,
+    },
+    renderer = {
+        group_empty = true,
+        indent_markers = {
+            enable = false,
+            inline_arrows = true,
+            icons = {
+                corner = "└",
+                edge = "│",
+                item = "│",
+                bottom = "─",
+                none = " ",
+            },
+        },
+
+        icons = {
+            glyphs = {
+                git = {
+                    unstaged = "󰏫",
+                    ignored = "󰍷",
+                    untracked = "󰐕",
+                    deleted = "",
+                }
+            }
+        },
+    },
 })
