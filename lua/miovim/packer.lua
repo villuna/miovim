@@ -54,15 +54,63 @@ return require('packer').startup(function(use)
                         icon = "󱘗",
                         color = "#FF6133",
                         name = "Rs",
-                    }
-                };
-                override_by_filename = {
+                    },
                     [".gitignore"] = {
                         icon = "󰊢",
                         color = "#F22C00",
-                        name = "Gitignore",
-                    }
-                }
+                        name = "GitIgnore",
+                    },
+                    json = {
+                        icon = "󰘦",
+                        color = "#cbcb41",
+                        cterm_color = "185",
+                        name = "Json",
+                    },
+                    tja = {
+                        icon = "󰪡",
+                        color = "#F84828",
+                        name = "Tja",
+                    },
+                    png = {
+                        icon = "󰈟",
+                        color = "#26a69a",
+                        name = "Png",
+                    },
+                    jpg = {
+                        icon = "󰈟",
+                        color = "#26a69a",
+                        name = "Jpg",
+                    },
+                    jpeg = {
+                        icon = "󰈟",
+                        color = "#26a69a",
+                        name = "Jpeg",
+                    },
+                    mp4 = {
+                        icon = "󰎁",
+                        color = "#ff9800",
+                        cterm_color = "208",
+                        name = "Mp4",
+                    },
+                    mp3 = {
+                        icon = "󰝚",
+                        color = "#f44336",
+                        cterm_color = "203",
+                        name = "Mp3",
+                    },
+                    wav = {
+                        icon = "󰝚",
+                        color = "#f44336",
+                        cterm_color = "203",
+                        name = "Wav",
+                    },
+                    ogg = {
+                        icon = "󰝚",
+                        color = "#f44336",
+                        cterm_color = "203",
+                        name = "ogg",
+                    },
+                };
             })
         end
     }
@@ -101,4 +149,6 @@ return require('packer').startup(function(use)
             start_in_insert = true,
         })
     end}
+
+    use 'andweeb/presence.nvim'
 end)
