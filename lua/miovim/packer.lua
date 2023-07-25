@@ -55,6 +55,11 @@ return require('packer').startup(function(use)
                         color = "#FF6133",
                         name = "Rs",
                     },
+                    rlib = {
+                        icon = "󱘗",
+                        color = "#DEA584",
+                        name = "Rlib",
+                    },
                     [".gitignore"] = {
                         icon = "󰊢",
                         color = "#F22C00",
@@ -109,6 +114,22 @@ return require('packer').startup(function(use)
                         color = "#f44336",
                         cterm_color = "203",
                         name = "ogg",
+                    },
+                    wgsl = {
+                        icon = "󰠱",
+                        color = "#39e678",
+                        name = "Wgsl",
+                    },
+                    glsl = {
+                        icon = "󰠱",
+                        color = "#39e678",
+                        name = "Glsl",
+                    },
+                    ["LICENSE"] = {
+                        icon = "󰄤",
+                        color = "#ff5722",
+                        cterm_color = "202",
+                        name = "License",
                     },
                 };
             })

@@ -8,3 +8,8 @@ for ext, filetype in pairs(custom_filetypes) do
         command = "set filetype=" .. filetype,
     })
 end
+
+vim.api.nvim_create_autocmd({"BufWinEnter", "FileReadPost"}, {
+    pattern = "*",
+    command = "normal zR",
+})
