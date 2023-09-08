@@ -48,91 +48,9 @@ return require('packer').startup(function(use)
     use {
         "DaikyXendo/nvim-material-icon",
         config = function()
-            require("nvim-material-icon").setup({
-                override = {
-                    rs = {
-                        icon = "󱘗",
-                        color = "#FF6133",
-                        name = "Rs",
-                    },
-                    rlib = {
-                        icon = "󱘗",
-                        color = "#DEA584",
-                        name = "Rlib",
-                    },
-                    [".gitignore"] = {
-                        icon = "󰊢",
-                        color = "#F22C00",
-                        name = "GitIgnore",
-                    },
-                    json = {
-                        icon = "󰘦",
-                        color = "#cbcb41",
-                        cterm_color = "185",
-                        name = "Json",
-                    },
-                    tja = {
-                        icon = "󰪡",
-                        color = "#F84828",
-                        name = "Tja",
-                    },
-                    png = {
-                        icon = "󰈟",
-                        color = "#26a69a",
-                        name = "Png",
-                    },
-                    jpg = {
-                        icon = "󰈟",
-                        color = "#26a69a",
-                        name = "Jpg",
-                    },
-                    jpeg = {
-                        icon = "󰈟",
-                        color = "#26a69a",
-                        name = "Jpeg",
-                    },
-                    mp4 = {
-                        icon = "󰎁",
-                        color = "#ff9800",
-                        cterm_color = "208",
-                        name = "Mp4",
-                    },
-                    mp3 = {
-                        icon = "󰝚",
-                        color = "#f44336",
-                        cterm_color = "203",
-                        name = "Mp3",
-                    },
-                    wav = {
-                        icon = "󰝚",
-                        color = "#f44336",
-                        cterm_color = "203",
-                        name = "Wav",
-                    },
-                    ogg = {
-                        icon = "󰝚",
-                        color = "#f44336",
-                        cterm_color = "203",
-                        name = "ogg",
-                    },
-                    wgsl = {
-                        icon = "󰠱",
-                        color = "#39e678",
-                        name = "Wgsl",
-                    },
-                    glsl = {
-                        icon = "󰠱",
-                        color = "#39e678",
-                        name = "Glsl",
-                    },
-                    ["LICENSE"] = {
-                        icon = "󰄤",
-                        color = "#ff5722",
-                        cterm_color = "202",
-                        name = "License",
-                    },
-                };
-            })
+            local icons = require("miovim.custom_icons").icons
+
+            require("nvim-material-icon").setup({ override = icons })
         end
     }
     use {
@@ -172,4 +90,5 @@ return require('packer').startup(function(use)
     end}
 
     use 'andweeb/presence.nvim'
+    use 'lervag/vimtex'
 end)
