@@ -91,4 +91,5 @@ return require('packer').startup(function(use)
 
     use 'andweeb/presence.nvim'
     use 'lervag/vimtex'
+    use {'kaarmu/typst.vim', ft = {'typst'}}
 end)

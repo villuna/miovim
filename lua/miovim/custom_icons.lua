@@ -128,6 +128,18 @@ local icons = {
         cterm_color = "67",
         name = "Ts",
     },
+    cs = {
+        icon = "󰌛",
+        color = "#C073D8",
+        cterm_color = "58",
+        name = "Cs",
+    },
+    tsx = {
+        icon = "󰜈",
+        color = "#519aba",
+        cterm_color = "67",
+        name = "Tsx",
+    }
 }
 
 return {
