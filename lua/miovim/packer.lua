@@ -45,18 +45,12 @@ return require('packer').startup(function(use)
     }
     use 'nvim-lualine/lualine.nvim'
 
-    use {
-        "DaikyXendo/nvim-material-icon",
-        config = function()
-            local icons = require("miovim.custom_icons").icons
-
-            require("nvim-material-icon").setup({ override = icons })
-        end
-    }
+    use 'Allianaab2m/nvim-material-icon-v3'
+    
     use {
         'DaikyXendo/nvim-tree.lua',
         requires = {
-            'DaikyXendo/nvim-material-icon', -- optional, for file icons
+            'Allianaab2m/nvim-material-icon-v3'
         },
         --tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
@@ -66,18 +60,8 @@ return require('packer').startup(function(use)
             vim.g.indentLine_char = '▏'
         end
     }
-    use {
-        "folke/which-key.nvim",
-        config = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-            require("which-key").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    }
+
+    use "folke/which-key.nvim"
 
     use "RRethy/vim-illuminate"
 

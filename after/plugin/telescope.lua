@@ -1,13 +1,13 @@
-local builtin = require('telescope.builtin')
-local wk = require("which-key")
+--local builtin = require('telescope.builtin')
+--local wk = require("which-key")
 
-wk.register({
-    f = {
-        name = "file",
-        f = { builtin.find_files, "Find file" },
-        g = { builtin.git_files, "Find file in git repo" },
-    }
-}, { prefix = "<leader>" })
+--wk.register({
+--    f = {
+--        name = "file",
+--        f = { builtin.find_files, "Find file" },
+--        g = { builtin.git_files, "Find file in git repo" },
+--    }
+--}, { prefix = "<leader>" })
 
 --vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 --vim.keymap.set('n', '<leader>gf', builtin.git_files, {})
